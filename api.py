@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
+from flasgger import Swagger
 
 from resources.user import User, UserItems, UserList
 from resources.item import Item, ItemList
@@ -7,6 +8,7 @@ from resources.bid import Bid, BidList
 
 app = Flask(__name__)
 api = Api(app, prefix="/api/v1")
+swagger = Swagger(app)
 
 api.add_resource(UserList, '/users')
 api.add_resource(User, '/users/<user_id>')

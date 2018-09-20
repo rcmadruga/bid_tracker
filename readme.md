@@ -2,7 +2,6 @@
 # Bid Tracker
 
 [![Build Status](https://travis-ci.com/rcmadruga/bid_tracker.svg?branch=master)](https://travis-ci.com/rcmadruga/bid_tracker)
-
 [![Assertible status](https://assertible.com/apis/c50fc991-ceb0-4f86-a189-d60579d7b9fe/status)](https://assertible.com/dashboard#/services/c50fc991-ceb0-4f86-a189-d60579d7b9fe/results)
 
 # Start of task
