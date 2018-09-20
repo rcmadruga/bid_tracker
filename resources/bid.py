@@ -42,7 +42,7 @@ class Bid(Resource):
         remove_bid_from_item(bid_id)
 
         del db.BIDS[bid_id]     
-        db.USERBIDS[user].remove(bid_id)       
+        db.USERBIDS[user_id].remove(bid_id)       
         return '', 204
 
     def put(self, bid_id):
