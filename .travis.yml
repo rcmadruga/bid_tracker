@@ -8,6 +8,8 @@ python:
 #    - PIPENV_IGNORE_VIRTUALENVS=1
 
 # command to install dependencies
-install: pipenv install
+install:
+  - 'pip install pipenv'
+  - 'pipenv install'
 # # command to run tests
 #script: pytes test
