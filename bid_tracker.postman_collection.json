@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "07bb2748-7dc2-4a75-8ae7-d7d445a68442",
+		"name": "AuctionTracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"David\"}"
+				},
+				"url": {
+					"raw": "myfakebidtracker.com:5000/api/v1/users",
+					"host": [
+						"myfakebidtracker.com"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				},
+				"description": "List of users in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bids",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"bid\": {\"item\": \"item1\", \"value\":650.0}}"
+				},
+				"url": {
+					"raw": "myfakebidtracker.com:5000/api/v1/bids",
+					"host": [
+						"myfakebidtracker.com"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bids"
+					]
+				},
+				"description": "Get a list of all bids on system"
+			},
+			"response": []
+		},
+		{
+			"name": "POST new bid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"bid\":\n\t{\n\t\"item\": \"item1\",\n\t\"value\":\"100000\",\n\t\"user\": \"user1\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "myfakebidtracker.com:5000/api/v1/bids",
+					"host": [
+						"myfakebidtracker.com"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bids"
+					]
+				},
+				"description": "Post a new bid on a specific item by an user with a value"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "myfakebidtracker.com:5000/api/v1/items",
+					"host": [
+						"myfakebidtracker.com"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"items"
+					]
+				},
+				"description": "Get list of items known to bid tracker"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item Param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "myfakebidtracker.com:5000/api/v1/items/item1?winningOnly=0&complete=1",
+					"host": [
+						"myfakebidtracker.com"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"items",
+						"item1"
+					],
+					"query": [
+						{
+							"key": "winningOnly",
+							"value": "0",
+							"description": "If set, shows only the winning bid for this item."
+						},
+						{
+							"key": "complete",
+							"value": "1",
+							"description": "If set, returns JSON with complete bid info, instead of only id.\n"
+						}
+					]
+				},
+				"description": "Get info of a selected item. Passing query parameters to filter what will be returned."
+			},
+			"response": []
+		},
+		{
+			"name": "Get items from a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "myfakebidtracker.com:5000/api/v1/users/user1/items",
+					"host": [
+						"myfakebidtracker.com"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"user1",
+						"items"
+					]
+				},
+				"description": "Get a list of all the items that this user has bid on. If a user bid two times at the same item, the item will appear only 1 time in the list."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete bid",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "myfakebidtracker.com:5000/api/v1/bids/bid3",
+					"host": [
+						"myfakebidtracker.com"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bids",
+						"bid3"
+					]
+				},
+				"description": "Delete a bid from system."
+			},
+			"response": []
+		}
+	]
+}
