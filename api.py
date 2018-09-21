@@ -8,6 +8,13 @@ from resources.bid import Bid, BidList
 
 app = Flask(__name__)
 api = Api(app, prefix="/api/v1")
+app.config['SWAGGER'] = {
+    'title': 'BidTracker REST API',
+    'uiversion': 3,
+    'openapi': '3.0.1',
+    'version': 'v1'
+}
+
 swagger = Swagger(app)
 
 api.add_resource(UserList, '/users')
