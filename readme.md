@@ -26,7 +26,7 @@ During development, Postman was used to test the API. A collection of all reques
 
 ## Git and Continous Integration Support
 
-This repository is hosted on GitHub. Every commit trigger a TravisCI build pipeline for testing. API test is handled by Assertible, triggered by a build pipeline script. Visit `.travis.yml` for more information.
+This repository is hosted on GitHub. Every commit triggers a TravisCI build pipeline for testing. API test is handled by Assertible, triggered by a build pipeline script. Visit `.travis.yml` for more information.
 
 - Github: [https://github.com/rcmadruga/bid_tracker](https://github.com/rcmadruga/bid_tracker)
 - TravisCI: [https://travis-ci.com/rcmadruga/bid_tracker](https://travis-ci.com/rcmadruga/bid_tracker)
@@ -52,7 +52,7 @@ For a robust and fast production solution, the stack would also have a dedicated
 
 Another option would be hosting this flask app in a PaaS offering, such as Google's AppEngine.
 
-A container/kubernetes solution should also be investigated, using its power and flexibility to scale dinamically on a larger field.
+A container/kubernetes solution should also be investigated, using its power and flexibility to scale dynamically  on a larger field.
 
 ## Database
 
